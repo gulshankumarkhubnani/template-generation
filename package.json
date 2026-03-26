@@ -27,11 +27,6 @@
           "type": "string",
           "default": "https://api.openai.com/v1/chat/completions",
           "description": "LLM / Chat completions endpoint URL"
-        },
-        "crudGenerator.llmApiKey": {
-          "type": "string",
-          "default": "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",
-          "description": "LLM API key"
         }
       }
     }
