@@ -1,0 +1,63 @@
+{
+  "name": "curd-generator",
+  "displayName": "curd-generator",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "test",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "crudGenerator.generate",
+        "title": "CRUD Generator: Generate"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "CRUD Generator",
+      "properties": {
+        "crudGenerator.llmEndpoint": {
+          "type": "string",
+          "default": "https://api.openai.com/v1/chat/completions",
+          "description": "LLM / Chat completions endpoint URL"
+        },
+        "crudGenerator.llmApiKey": {
+          "type": "string",
+          "default": "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",
+          "description": "LLM API key"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "vsce package",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.110.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.7.1",
+    "eslint": "^9.39.3",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
