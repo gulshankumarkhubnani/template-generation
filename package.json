@@ -22,7 +22,6 @@
     "configuration": {
       "type": "object",
       "title": "CRUD Generator",
-      
       "properties": {
         "crudGenerator.llmEndpoint": {
           "type": "string",
