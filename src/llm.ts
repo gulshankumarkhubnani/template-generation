@@ -9,6 +9,7 @@ async function callLLM(messages: LLMMessage[]): Promise<string> {
   const config = vscode.workspace.getConfiguration('crudGenerator');
   const endpoint = config.get<string>('llmEndpoint')?.trim() || '';
   const apiKey = config.get<string>('llmApiKey')?.trim() || '';
+  // const apiKey ="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",
           
 
   if (!endpoint || !apiKey) {
